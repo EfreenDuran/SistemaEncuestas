@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace SistemaEncuestas.Models.domin
+namespace SistemaEncuestas.Models.domain
 {
     public class Escuesta
     {

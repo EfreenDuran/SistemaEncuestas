@@ -16,7 +16,7 @@ namespace SistemaEncuestas.repositorio.Interfaz
         //eliminar 
         void Delete(int Id);
         //mostrar (GetByld obtener por id)
-        Producto GetById(int Id);
+        Encuesta GetById(int Id);           //****** Modifiqué esta parte, tenías: Producto GetById(int Id);  
 
         //regresa una lista de alguna encuesta
         IQueryable<Encuesta> GetAll();
