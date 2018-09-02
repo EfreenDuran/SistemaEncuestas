@@ -33,7 +33,7 @@ namespace proyecto.repositorio.repositorios
         public void Update(Encuesta entity)
         {
             //buscamos la encuesta y asignamos un variable tem, ponemos en bay espascio para poder modificarlo
-            Producto local = GetById(entity.Id);
+            Encuesta local = GetById(entity.Id);        //****** Modifiqué esta parte, tenías: Producto local = GetById(entity.Id);  
             if (local != null)
                 context.Entry<Encuesta>(local).State = EntityState.Detached;
             context.Entry <Encuesta>(local).State = EntityState.Modified;
