@@ -1,5 +1,4 @@
-﻿using SistemaEncuestas.Models.domain;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -15,7 +14,7 @@ namespace SistemaEncuestas.Models.Domain
         public int Id { get; set; }
         public string NRespuesta { get; set; }
         [ForeignKey("Preguntas")]
-        public String IdPregunta { get; set; }
+        public int IdPregunta { get; set; }
         [ForeignKey("AspNetUsers")]
         public String IdUsuario { get; set; }
 
