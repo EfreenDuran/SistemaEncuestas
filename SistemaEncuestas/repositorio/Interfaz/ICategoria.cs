@@ -13,7 +13,7 @@ namespace SistemaEncuestas.repositorio.Interfaz
         void Create(Categoria entity);
         void Update(Categoria entity);
         void Delete(int Id);
-        Encuesta GetById(int Id);
+        Categoria GetById(int Id);
         IQueryable<Categoria> GetAll();
         IQueryable<Categoria> FindBy(Expression<Func<Categoria, bool>> Conditional);
 
