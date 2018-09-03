@@ -1,4 +1,4 @@
-﻿using SistemaEncuestas.Models.domain;
+﻿using SistemaEncuestas.Models.Domain;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;

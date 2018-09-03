@@ -45,7 +45,7 @@ namespace SistemaEncuestas.Negocio
             }
             catch (Exception ex)
             {
-                unitOfWork.rollBack();
+                unitOfWork.RollBack();
                 return false;
             }
         }
@@ -72,7 +72,7 @@ namespace SistemaEncuestas.Negocio
             }
             catch (Exception ex)
             {
-                unitOfWork.rollBack();
+                unitOfWork.RollBack();
             }
         }
         public void Actualizar(Respuesta entity)
