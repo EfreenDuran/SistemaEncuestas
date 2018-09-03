@@ -1,3 +1,4 @@
+//Hola
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -84,7 +85,6 @@ namespace SistemaEncuestas.Negocios
             {
                 categoriaRepo.Delete(id);
                 unitOfWork.Commit();
-
             }
             catch (Exception ex)
             {
