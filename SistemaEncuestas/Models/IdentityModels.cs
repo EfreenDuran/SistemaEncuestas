@@ -36,17 +36,13 @@ namespace SistemaEncuestas.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
+            : base("Gabriel", throwIfV1Schema: false)
         {
-            : base("Gabriel", throwIfV1Schema: false);
         }
 
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
-        public DbSet<Respuesta> Respuesta { get; set; }
-        public DbSet<Pregunta> Preguntas { get; set; }
-        public DbSet<Encuesta> Encuestas { get; set; }
-        public DbSet<Categoria> Categorias { get; set; }
     }
 }
