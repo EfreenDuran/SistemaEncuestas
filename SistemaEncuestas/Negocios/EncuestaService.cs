@@ -1,4 +1,4 @@
-﻿//IO
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -64,7 +64,7 @@ namespace SistemaEncuestas.Negocios
             }
         }
         //cambio su status
-        //aca se elimina  la venta
+        //aca el activa o desactiva el status
         public void Eliminar(int Id)
         {
             try

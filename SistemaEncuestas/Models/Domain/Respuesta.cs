@@ -13,13 +13,13 @@ namespace SistemaEncuestas.Models.Domain
         //propiedades de la clase
         [Key]
         public int Id { get; set; }
-        public string Respuestas { get; set; }
-        [ForeignKey]
+        public string NRespuesta { get; set; }
+        [ForeignKey("Preguntas")]
         public String IdPregunta { get; set; }
-        [ForeignKey]
+        [ForeignKey("AspNetUsers")]
         public String IdUsuario { get; set; }
 
         public virtual ApplicationUser AspNetUsers { get; set; }
-        public virtual ICollection<Pregunta> Preguntas { get; set; }
+        public virtual Pregunta Preguntas { get; set; }
     }
 }

@@ -12,7 +12,6 @@ namespace SistemaEncuestas
         void Create(Respuesta entity);
         void Update(Respuesta entity);
         void Delete(int Id);
-        IRespuesta GetbyId(int id);
         IQueryable<Respuesta> GetAll();
         Respuesta GetById(int id);
     }
