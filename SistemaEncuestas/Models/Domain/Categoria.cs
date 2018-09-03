@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace SistemaEncuestas.Models.domain
+namespace SistemaEncuestas.Models.Domain
 {
     public class Categoria
     {
