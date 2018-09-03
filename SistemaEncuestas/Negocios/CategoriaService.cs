@@ -84,6 +84,7 @@ namespace SistemaEncuestas.Negocios
             {
                 categoriaRepo.Delete(id);
                 unitOfWork.Commit();
+
             }
             catch (Exception ex)
             {
