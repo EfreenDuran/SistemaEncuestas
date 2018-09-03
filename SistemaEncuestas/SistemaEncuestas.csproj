@@ -201,6 +201,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\IUnitOfWork.cs" />
     <Compile Include="Negocios\CategoriaService.cs" />
     <Compile Include="Negocios\EncuestaService.cs" />
     <Compile Include="Negocios\PreguntaService.cs" />
@@ -208,14 +209,19 @@
     <Compile Include="Repositorio\Infraestructura\ContextFactory.cs" />
     <Compile Include="Repositorio\Infraestructura\IUnitOfWork.cs" />
     <Compile Include="Repositorio\Infraestructura\UnitOfWork.cs" />
-    <Compile Include="Repositorio\Interfaces\IRespuestas.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Domain\Respuesta.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositorio\Interfaces\prueba.cs" />
-    <Compile Include="Repositorio\SqlEntity\RespuestaRepositorio.cs" />
+    <Compile Include="Repositorio\Interfaz\ICategoria.cs" />
+    <Compile Include="Repositorio\Interfaz\IEncuesta.cs" />
+    <Compile Include="Repositorio\Interfaz\IPregunta.cs" />
+    <Compile Include="Repositorio\Interfaz\IRespuesta.cs" />
+    <Compile Include="Repositorio\repositorios\CategoriaRepository.cs" />
+    <Compile Include="Repositorio\repositorios\EncuestaRepository.cs" />
+    <Compile Include="Repositorio\repositorios\PreguntaRepository.cs" />
+    <Compile Include="Repositorio\repositorios\RespuestaRepositorio.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -280,6 +286,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="bin\" />
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
