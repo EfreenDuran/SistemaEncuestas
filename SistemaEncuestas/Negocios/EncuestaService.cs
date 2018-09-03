@@ -78,7 +78,7 @@ namespace SistemaEncuestas.Negocios
             }
             catch (Exception ex)
             {
-                //unitOfWork.RollBack();
+                unitOfWork.RollBack();
             }
         }
 
