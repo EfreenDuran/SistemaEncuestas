@@ -1,3 +1,4 @@
+using SistemaEncuestas.Models.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,10 +13,10 @@ namespace SistemaEncuestas.repositorio.Interfaz
       
         void Create(Categoria entity);
         void Update(Categoria entity);
-        void Delete(int Id);
-        Categoria GetById(int Id);
+        void Delete(int id);
+        Categoria GetById(int id);
         IQueryable<Categoria> GetAll();
         IQueryable<Categoria> FindBy(Expression<Func<Categoria, bool>> Conditional);
-
+      
     }
 }

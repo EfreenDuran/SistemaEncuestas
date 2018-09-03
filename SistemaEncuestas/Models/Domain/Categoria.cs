@@ -12,7 +12,7 @@ namespace SistemaEncuestas.Models.Domain
         [Key]
         public int Id { get; set;}
         [StringLength(100)]
-        public string Categoria { get; set;}
+        public string Nombre { get; set;}
         public int Status { get; set;}
 
         public virtual ICollection<Encuesta> Encuestas { get; set; }

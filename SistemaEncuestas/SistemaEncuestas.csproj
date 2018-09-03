@@ -204,14 +204,10 @@
     <Compile Include="Models\Domain\Categoria.cs" />
     <Compile Include="Models\Domain\Encuesta.cs" />
     <Compile Include="Models\Domain\Pregunta.cs" />
-    <Compile Include="Models\IUnitOfWork.cs" />
     <Compile Include="Negocios\CategoriaService.cs" />
     <Compile Include="Negocios\EncuestaService.cs" />
     <Compile Include="Negocios\PreguntaService.cs" />
     <Compile Include="Negocios\RespuestaService.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Repositorio\Infraestructura\ContextFactory.cs" />
     <Compile Include="Repositorio\Infraestructura\IUnitOfWork.cs" />
     <Compile Include="Repositorio\Infraestructura\UnitOfWork.cs" />
@@ -239,16 +235,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="obj\Debug\SistemaEncuestas.csproj.FileListAbsolute.txt" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <Content Include="obj\Debug\SistemaEncuestas.csproj.CoreCompileInputs.cache" />
-    <Content Include="obj\Release\SistemaEncuestas.csproj.CoreCompileInputs.cache" />
-    <Content Include="obj\Debug\SistemaEncuestas.csprojAssemblyReference.cache" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -297,8 +288,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="bin\" />
-    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
