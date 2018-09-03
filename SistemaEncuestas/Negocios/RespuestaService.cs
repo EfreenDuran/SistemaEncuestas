@@ -5,10 +5,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
+//COMENTARIO
+
 namespace SistemaEncuestas.Negocio
 {
     public class RespuestaService
-    {
+    {   
         //inyeccion de dependencias
         IUnitOfWork unitOfWork;
         IRespuesta RespuestaRepo;
