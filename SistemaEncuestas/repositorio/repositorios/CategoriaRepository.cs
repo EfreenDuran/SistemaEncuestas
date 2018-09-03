@@ -5,7 +5,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Web;
 
-namespace proyecto.repositorio.repositorios
+namespace SistemaEncuestas.repositorio.repositorios
 {
     public class CategoriaRepository : ICategoria
     {
