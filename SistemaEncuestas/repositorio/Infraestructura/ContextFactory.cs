@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SistemaEncuestas.repositorio.Infraestructura
+namespace SistemaEncuestas.Repositorio.Infraestructura
 {
     public class ContextFactory
     {

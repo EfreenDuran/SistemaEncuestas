@@ -1,11 +1,6 @@
-﻿using SistemaEncuestas.Models;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Web;
+﻿using System;
 
-namespace SistemaEncuestas.Repositorio.Infraestructura
+namespace SistemaEncuestas.repositorio.Infraestructura
 {
     public class UnitOfWork : IUnitOfWork
     {
@@ -14,13 +9,14 @@ namespace SistemaEncuestas.Repositorio.Infraestructura
         {
             get { return context = context ?? ContextFactory.GetContext(); }
         }
-        public void commit()
+        public void Commit()
         {
-            context.SaveChanges();
+            Context.SaveChanges();
         }
+
         public void RollBack()
         {
-            foreach (var entry in context.ChangeTracker.Entries())
+            foreach (var entry in Context.ChangeTracker.Entries())
             {
                 switch (entry.State)
                 {
