@@ -204,6 +204,7 @@
     <Compile Include="Models\Domain\Categoria.cs" />
     <Compile Include="Models\Domain\Encuesta.cs" />
     <Compile Include="Models\Domain\Pregunta.cs" />
+    <Compile Include="Models\IUnitOfWork.cs" />
     <Compile Include="Negocios\CategoriaService.cs" />
     <Compile Include="Negocios\EncuestaService.cs" />
     <Compile Include="Negocios\PreguntaService.cs" />
@@ -288,6 +289,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

@@ -1,6 +1,9 @@
-﻿using System.Data.Entity;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using SistemaEncuestas.Models.Domain;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 
