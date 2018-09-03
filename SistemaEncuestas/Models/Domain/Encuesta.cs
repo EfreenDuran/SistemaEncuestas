@@ -22,8 +22,6 @@ namespace SistemaEncuestas.Models.Domain
         [ForeignKey("Categorias")]
         public int IdCategorias { get; set; }
 
-
-
         //propiedad de navegacion(en bd son las cardinalidades)
         //HACE REFERENCIA A LA CLASE CATEGORIA
         public virtual Categoria Categorias { get; set; }
