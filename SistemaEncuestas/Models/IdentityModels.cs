@@ -6,21 +6,6 @@ using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace SistemaEncuestas.Models
 {
-
-    [StringLength(30)]
-    public string Nombre { get; set; }
-    [StringLength(30)]
-    public string APaterno { get; set; }
-    [StringLength(30)]
-    public string AMaterno { get; set; }
-    [StringLength(1)]
-    public string Sexo { get; set; }
-    [StringLength(14)]
-    public string Id { get; set; }
-
-    public virtual ICollection<Respuesta> Respuestas { get; set; }
-
-
     // Para agregar datos de perfil del usuario, agregue más propiedades a su clase ApplicationUser. Visite https://go.microsoft.com/fwlink/?LinkID=317594 para obtener más información.
     public class ApplicationUser : IdentityUser
     {
@@ -36,7 +21,7 @@ namespace SistemaEncuestas.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("Gabriel", throwIfV1Schema: false)
+           : base("DefaultConection", throwIfV1Schema: false)
         {
         }
 
@@ -44,5 +29,8 @@ namespace SistemaEncuestas.Models
         {
             return new ApplicationDbContext();
         }
+        public DbSet<Pregunta> Preguntas { get; set; }
+        public DbSet<Categoria> Categorias { get; set; } //Crea el puente conexion a la base de datos 
+        public object Respuestas { get; internal set; }
     }
 }
