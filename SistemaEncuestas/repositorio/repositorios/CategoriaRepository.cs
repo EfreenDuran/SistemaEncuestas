@@ -1,9 +1,11 @@
+using SistemaEncuestas.Models;
+using SistemaEncuestas.Models.Domain;
 using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Web;
+using SistemaEncuestas.Repositorio.Infraestructura;
+using SistemaEncuestas.repositorio.Interfaz;
 
 namespace SistemaEncuestas.repositorio.repositorios
 {

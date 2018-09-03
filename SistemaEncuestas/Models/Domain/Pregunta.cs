@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace SistemaEncuestas.Models.domain
+namespace SistemaEncuestas.Models.Domain
 {
     public class Pregunta
     {
