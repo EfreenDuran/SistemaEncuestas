@@ -15,7 +15,7 @@ namespace SistemaEncuestas.Models.Domain
         public string Categoria { get; set;}
         public int Status { get; set;}
 
-        public virtual ICollection<Categoria> Categorias { get; set; }
+        public virtual ICollection<Encuesta> Encuestas { get; set; }
 
     }
 
