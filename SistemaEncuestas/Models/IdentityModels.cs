@@ -22,6 +22,7 @@ namespace SistemaEncuestas.Models
         public string Id { get; set; }
 
         public virtual ICollection<Respuesta> Respuestas { get; set; }
+
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             // Tenga en cuenta que el valor de authenticationType debe coincidir con el definido en CookieAuthenticationOptions.AuthenticationType

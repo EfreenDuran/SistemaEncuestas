@@ -66,6 +66,22 @@ namespace SistemaEncuestas.Negocios
         {
             try
             {
+                var temp = categoriaRepo.GetbyId(id);
+                if (temp.Status == 1)
+                    temp.Status = 0;
+                else if (temp.Status == 0)
+                    temp.Status = 1;
+                categoriaRepo.Update(temp);
+                unitOfWork.Commit();
+            }
+            catch(Exception ex)
+            {
+
+            }
+        
+            /*
+            try
+            {
                 categoriaRepo.Delete(id);
                 unitOfWork.Commit();
             }
@@ -73,7 +89,7 @@ namespace SistemaEncuestas.Negocios
             {
                 unitOfWork.RollBack();
 
-            }
+            }*/
         }
         public void Actualizar(Categoria entity)
         {
