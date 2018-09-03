@@ -7,7 +7,7 @@ using System.Web;
 
 namespace SistemaEncuestas.Models.Domain
 {
-    public class Escuesta
+    public class Encuesta
     {
         //llave primaria
         [Key]
