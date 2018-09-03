@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SistemaEncuestas.Models.Domain;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -11,7 +13,7 @@ namespace SistemaEncuestas.Models.domain
         public int Id { get; set; }
         //preguntas de maximo 60 caracteres
         [StringLength(60)]
-        public string Pregunta { get; set; }
+        public string NPregunta { get; set; }
         //llave foranea(tabla de referencia)
         [ForeignKey("Encuestas")]
         public int IdEncuesta { get; set; }

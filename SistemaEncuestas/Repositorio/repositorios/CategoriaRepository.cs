@@ -1,3 +1,7 @@
+using SistemaEncuestas.Models;
+using SistemaEncuestas.Models.Domain;
+using SistemaEncuestas.repositorio.Interfaz;
+using SistemaEncuestas.Repositorio.Infraestructura;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;

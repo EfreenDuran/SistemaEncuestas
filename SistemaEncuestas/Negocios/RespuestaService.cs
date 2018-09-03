@@ -1,5 +1,5 @@
 ﻿using SistemaEncuestas.Models.Domain;
-using SistemaEncuestas.Repositorio.Infraestructura;
+using SistemaEncuestas.repositorio.Infraestructura;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,7 +39,7 @@ namespace SistemaEncuestas.Negocio
             try
             {
                 RespuestaRepo.Create(entity);
-                unitOfWork.commit();
+                unitOfWork.Commit();
                 return true;
             }
             catch (Exception ex)
@@ -67,7 +67,7 @@ namespace SistemaEncuestas.Negocio
             try
             {
                 RespuestaRepo.Delete(id);
-                unitOfWork.commit();
+                unitOfWork.Commit();
             }
             catch (Exception ex)
             {
@@ -79,7 +79,7 @@ namespace SistemaEncuestas.Negocio
             try
             {
                 RespuestaRepo.Update(entity);
-                unitOfWork.commit();
+                unitOfWork.Commit();
             }
             catch (Exception ex)
             {
