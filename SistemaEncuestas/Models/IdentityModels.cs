@@ -1,8 +1,12 @@
-﻿using System.Data.Entity;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Data.Entity;
 using System.Security.Claims;
+using SistemaEncuestas.Models.Domain;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using SistemaEncuestas.Models.domain;
 
 namespace SistemaEncuestas.Models
 {
@@ -13,13 +17,11 @@ namespace SistemaEncuestas.Models
         [StringLength(30)]
         public string Nombre { get; set; }
         [StringLength(30)]
-        public string A_Paterno { get; set; }
+        public string APaterno { get; set; }
         [StringLength(30)]
-        public string A_Materno { get; set; }
+        public string AMaterno { get; set; }
         [StringLength(1)]
         public string Sexo { get; set; }
-        [StringLength(10)]
-        public string Id { get; set; }
 
         public virtual ICollection<Respuesta> Respuestas { get; set; }
 
@@ -47,6 +49,7 @@ namespace SistemaEncuestas.Models
         public DbSet<Categoria> Categorias { get; set; } //Crea el puente conexion a la base de datos 
         public DbSet<Respuesta> Respuestas { get; set; }
         public DbSet<Encuesta> Encuestas { get; set; }
+
 
     }
 }

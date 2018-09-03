@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaEncuestas.Models.domain;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -19,6 +20,6 @@ namespace SistemaEncuestas.Models.Domain
         public String IdUsuario { get; set; }
 
         public virtual ApplicationUser AspNetUsers { get; set; }
-        public virtual ICollection<Preguntas> Preguntas { get; set; }
+        public virtual ICollection<Pregunta> Preguntas { get; set; }
     }
 }
