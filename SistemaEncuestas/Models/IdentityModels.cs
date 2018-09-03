@@ -21,7 +21,7 @@ namespace SistemaEncuestas.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-           : base("DefaultConnection", throwIfV1Schema: false)
+           : base("DefaultConection", throwIfV1Schema: false)
         {
         }
 
@@ -31,5 +31,6 @@ namespace SistemaEncuestas.Models
         }
         public DbSet<Pregunta> Preguntas { get; set; }
         public DbSet<Categoria> Categorias { get; set; } //Crea el puente conexion a la base de datos 
+        public object Respuestas { get; internal set; }
     }
 }

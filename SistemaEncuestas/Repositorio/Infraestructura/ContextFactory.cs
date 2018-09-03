@@ -1,8 +1,5 @@
 ﻿using SistemaEncuestas.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace SistemaEncuestas.Repositorio.Infraestructura
 {
@@ -10,9 +7,9 @@ namespace SistemaEncuestas.Repositorio.Infraestructura
     {
         static ApplicationDbContext context = null;
 
-        internal static ApplicationDbContext GetContext()
+        internal static ApplicationDbContext GetContext()   // estamos trabajando con el patron de diseño singleton el cual nos asegura que solo trabajemos con el mismo contexto para todo el proyecto
         {
-            return context = context ?? new ApplicationDbContext(); //Singgleton
+            return context = context ?? new ApplicationDbContext();
         }
     }
 }
