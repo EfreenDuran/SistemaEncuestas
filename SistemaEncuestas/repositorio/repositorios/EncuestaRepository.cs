@@ -1,4 +1,8 @@
-﻿using System;
+﻿using SistemaEncuestas.Models;
+using SistemaEncuestas.Models.Domain;
+using SistemaEncuestas.repositorio.Interfaz;
+using SistemaEncuestas.Repositorio.Infraestructura;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -20,7 +24,7 @@ namespace SistemaEncuestas.repositorio.repositorios
         {
             context.Encuestas.Add(entity);
         }
-        public Encuestas GetById(int Id)
+        public Encuesta GetById(int Id)
         {
             //busca Encuestas igual a su id
             return context.Encuestas.FirstOrDefault(c => c.Id == Id);
