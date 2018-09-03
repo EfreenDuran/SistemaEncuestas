@@ -16,9 +16,7 @@ namespace SistemaEncuestas.Models.Domain
         //RESTRICCION DEL STRING DE 40 CARACTERES
         [StringLength(40)]
         public string Encuesta { get; set; }
-        //Restriccion de string 30 caracteres
-        [StringLength(30)]
-        public string Status { get; set; }
+        public int Status { get; set; }
         //llave foranea(tabla de referencia)
         [ForeignKey("Categorias")]
         public int IdCategorias { get; set; }
