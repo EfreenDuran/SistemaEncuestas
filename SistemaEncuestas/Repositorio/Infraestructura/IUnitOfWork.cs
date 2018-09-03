@@ -6,5 +6,6 @@ namespace SistemaEncuestas.repositorio.Infraestructura
     {
         void Commit();
         void RollBack();
+        
     }
 }
