@@ -1,9 +1,13 @@
-﻿using System;
+﻿using SistemaEncuestas.Models;
+using SistemaEncuestas.Models.Domain;
+using SistemaEncuestas.Repositorio.Infraestructura;
+using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Web;
+using SistemaEncuestas.repositorio.Interfaz;
+using SistemaEncuestas.Repositorio.Interfaz;
 
 namespace SistemaEncuestas.repositorio.repositorios
 {
@@ -20,15 +24,15 @@ namespace SistemaEncuestas.repositorio.repositorios
         {
             context.Encuestas.Add(entity);
         }
-        public Encuestas GetById(int Id)
+        public Encuesta GetById(int id)
         {
             //busca Encuestas igual a su id
-            return context.Encuestas.FirstOrDefault(c => c.Id == Id);
+            return context.Encuestas.FirstOrDefault(c => c.Id == id);
         }
         //busca encuesta para poder eliminarla
         public void Delete(int Id)
         {
-            context.Entry<Encuesta>(GetById(Id)).State = System.Data.Entity.EntityState.Deleted;
+            context.entry<Encuesta>(GetById(Id)).State = System.Data.Entity.EntityState.Deleted;
         }
         public void Update(Encuesta entity)
         {

@@ -1,4 +1,9 @@
 ﻿
+using SistemaEncuestas.Models.Domain;
+using SistemaEncuestas.repositorio.Infraestructura;
+using SistemaEncuestas.repositorio.Interfaz;
+using SistemaEncuestas.repositorio.repositorios;
+using SistemaEncuestas.Repositorio.Interfaz;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +17,7 @@ namespace SistemaEncuestas.Negocios
         IUnitOfWork unitOfWork;
         IEncuesta encuestaRepo;
 
-        public EncuestaService() : this(new EncuestaRepository(), new UnittOfWork()) { }
+        public EncuestaService() : this(new EncuestaRepository(), new UnitOfWork()) { }
         public EncuestaService(IEncuesta _encuestaRepo, IUnitOfWork _unitOfWork)
         {
             //mis variable, la hace propia (variable local) solo en el metodo
