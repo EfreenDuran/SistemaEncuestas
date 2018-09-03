@@ -6,7 +6,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace SistemaEncuestas.Negocios { 
+namespace SistemaEncuestas.Negocios
+{
     public class PreguntaService
     {
         //Inyeccion de dependencia
@@ -68,11 +69,11 @@ namespace SistemaEncuestas.Negocios {
             try
             {
                 preguntaRepo.Delete(Id);
-                UnitOfWork.Commit();
+                unitOfWork.Commit();
             }
             catch (Exception ex)
             {
-                UnitOfWork.RollBack();
+                unitOfWork.RollBack();
             }
         }
 
@@ -81,7 +82,7 @@ namespace SistemaEncuestas.Negocios {
             try
             {
                 preguntaRepo.Update(entity);
-                UnitOfWork.Commit();
+                unitOfWork.Commit();
             }
             catch (Exception ex)
             {
