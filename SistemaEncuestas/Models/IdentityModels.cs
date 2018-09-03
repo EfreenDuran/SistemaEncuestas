@@ -45,6 +45,8 @@ namespace SistemaEncuestas.Models
         }
         public DbSet<Pregunta> Preguntas { get; set; }
         public DbSet<Categoria> Categorias { get; set; } //Crea el puente conexion a la base de datos 
-        public object Respuestas { get; internal set; }
+        public DbSet<Respuesta> Respuestas { get; set; }
+        public DbSet<Encuesta> Encuestas { get; set; }
+
     }
 }

@@ -68,12 +68,17 @@ namespace SistemaEncuestas.Negocios
         {
             try
             {
-                encuestaRepo.Delete(Id);
+                var temp = encuestaRepo.GetById(Id);
+                if (temp.Status == 1)
+                    temp.Status = 0;
+                else if (temp.Status == 0)
+                    temp.Status = 1;
+                encuestaRepo.Update(temp);
                 unitOfWork.Commit();
             }
             catch (Exception ex)
             {
-                unitOfWork.RollBack();
+                //unitOfWork.RollBack();
             }
         }
 
