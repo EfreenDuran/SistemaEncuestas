@@ -1,11 +1,12 @@
-﻿using System;
+﻿using SistemaEncuestas.Models.Domain;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SistemaEncuestas.repositorio.Interfaz
+namespace SistemaEncuestas.Repositorio.Interfaz
 {
     public interface IEncuesta
     {
@@ -14,9 +15,9 @@ namespace SistemaEncuestas.repositorio.Interfaz
         //actualizar, se actualiza una encuesta
         void Update(Encuesta entity);
         //eliminar 
-        void Delete(int Id);
+        void Delete(int id);
         //mostrar (GetByld obtener por id)
-        Encuesta GetById(int Id);          
+        Encuesta GetById(int id);          
 
         //regresa una lista de alguna encuesta
         IQueryable<Encuesta> GetAll();
