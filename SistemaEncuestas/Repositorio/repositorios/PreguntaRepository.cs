@@ -1,4 +1,11 @@
-﻿using System;
+﻿using SistemaEncuestas.Models;
+using SistemaEncuestas.Models.domain;
+using SistemaEncuestas.repositorio.Interfaz;
+using SistemaEncuestas.Repositorio.Infraestructura;
+using System;
+using System.Data.Entity;
+using System.Linq;
+using System.Linq.Expressions;
 
 namespace proyecto.repositorio.repositorios
 {
@@ -13,7 +20,7 @@ namespace proyecto.repositorio.repositorios
         {
             context.Preguntas.Add(entity);
         }
-        public Preguntas GetById(int Id)
+        public Pregunta GetById(int Id)
         {
             return context.Preguntas.FirstOrDefault(c => c.Id == Id);
         }
