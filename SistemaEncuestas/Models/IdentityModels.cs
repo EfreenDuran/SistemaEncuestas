@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
-using SistemaEncuestas.Models.domain;
+
 
 namespace SistemaEncuestas.Models
 {
