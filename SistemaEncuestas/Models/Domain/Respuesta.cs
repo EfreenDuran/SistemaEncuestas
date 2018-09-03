@@ -15,7 +15,7 @@ namespace SistemaEncuestas.Models.Domain
         public int Id { get; set; }
         public string NRespuesta { get; set; }
         [ForeignKey("Preguntas")]
-        public String IdPregunta { get; set; }
+        public int IdPregunta { get; set; }
         [ForeignKey("AspNetUsers")]
         public String IdUsuario { get; set; }
 

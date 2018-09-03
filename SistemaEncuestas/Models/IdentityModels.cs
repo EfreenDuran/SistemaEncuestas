@@ -36,8 +36,7 @@ namespace SistemaEncuestas.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationDbContext()
-           : base("Gabriel", throwIfV1Schema: false)
+        public ApplicationDbContext():base("Alva", throwIfV1Schema: false)
         {
         }
 
