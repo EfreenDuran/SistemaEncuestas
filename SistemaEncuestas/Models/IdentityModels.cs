@@ -6,9 +6,22 @@ using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace SistemaEncuestas.Models
 {
+    
     // Para agregar datos de perfil del usuario, agregue más propiedades a su clase ApplicationUser. Visite https://go.microsoft.com/fwlink/?LinkID=317594 para obtener más información.
     public class ApplicationUser : IdentityUser
     {
+        [StringLength(30)]
+        public string Nombre { get; set; }
+        [StringLength(30)]
+        public string A_Paterno { get; set; }
+        [StringLength(30)]
+        public string A_Materno { get; set; }
+        [StringLength(1)]
+        public string Sexo { get; set; }
+        [StringLength(10)]
+        public string Id { get; set; }
+
+        public virtual ICollection<Respuesta> Respuestas { get; set; }
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             // Tenga en cuenta que el valor de authenticationType debe coincidir con el definido en CookieAuthenticationOptions.AuthenticationType
@@ -21,7 +34,7 @@ namespace SistemaEncuestas.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-           : base("DefaultConection", throwIfV1Schema: false)
+           : base("Gabriel", throwIfV1Schema: false)
         {
         }
 
