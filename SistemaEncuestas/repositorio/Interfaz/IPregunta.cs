@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SistemaEncuestas.Models.Domain;
+using System;
+using System.Linq;
 
 namespace SistemaEncuestas.repositorio.Interfaz
 {

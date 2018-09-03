@@ -1,4 +1,7 @@
-﻿using System;
+﻿using SistemaEncuestas.Models;
+using SistemaEncuestas.Repositorio.Infraestructura;
+using System;
+using System.Data.Entity;
 
 namespace SistemaEncuestas.repositorio.Infraestructura
 {

@@ -1,10 +1,8 @@
-//Hola
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using SistemaEncuestas.Models.Domain;
-using SistemaEncuestas.repositorio;
 using SistemaEncuestas.repositorio.Infraestructura;
 using SistemaEncuestas.repositorio.Interfaz;
 using SistemaEncuestas.repositorio.repositorios;

@@ -1,13 +1,20 @@
-﻿using System;
+﻿using proyecto.repositorio.repositorios;
+using SistemaEncuestas.Models.Domain;
+using SistemaEncuestas.repositorio.Infraestructura;
+using SistemaEncuestas.repositorio.Interfaz;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
-namespace SistemaEncuestas.Negocios { 
+namespace SistemaEncuestas.Negocios
+{
     public class PreguntaService
     {
         //Inyeccion de dependencia
         IUnitOfWork unitOfWork;
-        IEncuesta encuestaRepo;
+        IPregunta preguntaRepo;
 
-        public PreguntaService() : this(new PreguntaRepository(), new UnittOfWork()) { }
+        public PreguntaService() : this(new PreguntaRepository(), new UnitOfWork()) { }
         public PreguntaService(IPregunta _preguntaRepo, IUnitOfWork _unitOfWork)
         {
             this.preguntaRepo = _preguntaRepo;
