@@ -201,10 +201,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Repositorio\Infraestructura\ContextFactory.cs" />
+    <Compile Include="Repositorio\Infraestructura\IUnitOfWork.cs" />
+    <Compile Include="Repositorio\Infraestructura\UnitOfWork.cs" />
+    <Compile Include="Repositorio\Interfaces\IRespuestas.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Domain\Respuesta.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Negocio\RespuestaService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorio\SqlEntity\RespuestaRepositorio.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
