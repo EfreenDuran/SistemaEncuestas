@@ -6,6 +6,7 @@ using System.Web;
 using SistemaEncuestas.Models.Domain;
 using SistemaEncuestas.repositorio;
 using SistemaEncuestas.repositorio.Infraestructura;
+using SistemaEncuestas.repositorio.Interfaz;
 using SistemaEncuestas.repositorio.repositorios;
 
 namespace SistemaEncuestas.Negocios
@@ -16,7 +17,7 @@ namespace SistemaEncuestas.Negocios
         IUnitOfWork unitOfWork;
         ICategoria categoriaRepo;
 
-        public CategoriaService() : this(new CategoriaRepositorio(), new UnitOfWork()) { }
+        public CategoriaService() : this(new CategoriaRepository(), new UnitOfWork()) { }
         public CategoriaService(ICategoria _categoriaRepo, IUnitOfWork _unitOfWork)
         {
             this.categoriaRepo = _categoriaRepo;
@@ -67,7 +68,7 @@ namespace SistemaEncuestas.Negocios
         {
             try
             {
-                var temp = categoriaRepo.GetbyId(id);
+                var temp = categoriaRepo.GetById(id);
                 if (temp.Status == 1)
                     temp.Status = 0;
                 else if (temp.Status == 0)
