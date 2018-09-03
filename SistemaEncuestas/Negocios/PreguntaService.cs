@@ -1,5 +1,4 @@
 ﻿using proyecto.repositorio.repositorios;
-using SistemaEncuestas.Models.domain;
 using SistemaEncuestas.Models.Domain;
 using SistemaEncuestas.repositorio.Infraestructura;
 using SistemaEncuestas.repositorio.Interfaz;
@@ -7,7 +6,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace SistemaEncuestas.Negocios { 
+namespace SistemaEncuestas.Negocios
+{
     public class PreguntaService
     {
         //Inyeccion de dependencia

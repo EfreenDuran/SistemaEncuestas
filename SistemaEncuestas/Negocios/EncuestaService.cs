@@ -1,8 +1,9 @@
-﻿//IO
+﻿
 using SistemaEncuestas.Models.Domain;
 using SistemaEncuestas.repositorio.Infraestructura;
 using SistemaEncuestas.repositorio.Interfaz;
 using SistemaEncuestas.repositorio.repositorios;
+using SistemaEncuestas.Repositorio.Interfaz;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -68,7 +69,7 @@ namespace SistemaEncuestas.Negocios
             }
         }
         //cambio su status
-        //aca se elimina  la venta
+        //aca el activa o desactiva el status
         public void Eliminar(int Id)
         {
             try

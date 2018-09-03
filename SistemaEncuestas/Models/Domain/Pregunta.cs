@@ -1,10 +1,11 @@
-﻿using SistemaEncuestas.Models.Domain;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Web;
 
-namespace SistemaEncuestas.Models.domain
+namespace SistemaEncuestas.Models.Domain
 {
     public class Pregunta
     {

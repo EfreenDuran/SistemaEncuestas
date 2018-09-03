@@ -1,4 +1,4 @@
-﻿using SistemaEncuestas.Models.domain;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -15,14 +15,11 @@ namespace SistemaEncuestas.Models.Domain
         public int Id { get; set; }
         //RESTRICCION DEL STRING DE 40 CARACTERES
         [StringLength(40)]
-        public string NEncuesta { get; set; }
-        //Restriccion de string 30 caracteres
+        public string Nombre { get; set; }
         public int Status { get; set; }
         //llave foranea(tabla de referencia)
         [ForeignKey("Categorias")]
         public int IdCategorias { get; set; }
-
-
 
         //propiedad de navegacion(en bd son las cardinalidades)
         //HACE REFERENCIA A LA CLASE CATEGORIA

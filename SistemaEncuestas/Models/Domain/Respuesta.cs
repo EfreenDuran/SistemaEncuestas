@@ -1,4 +1,4 @@
-﻿using SistemaEncuestas.Models.domain;
+﻿using SistemaEncuestas.Models.Domain;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -13,9 +13,9 @@ namespace SistemaEncuestas.Models.Domain
         //propiedades de la clase
         [Key]
         public int Id { get; set; }
-        public string Respuestas { get; set; }
-        [ForeignKey("Pregunta")]
-        public int IdPregunta { get; set; }
+        public string NRespuesta { get; set; }
+        [ForeignKey("Preguntas")]
+        public String IdPregunta { get; set; }
         [ForeignKey("AspNetUsers")]
         public String IdUsuario { get; set; }
 

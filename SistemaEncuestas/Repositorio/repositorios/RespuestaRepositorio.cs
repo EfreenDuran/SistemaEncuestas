@@ -25,7 +25,7 @@ namespace SistemaEncuestas
         {
             return context.Respuestas.FirstOrDefault(c => c.Id == id);
         }
-
+        
         public void Delete(int id)
         {
             context.Entry<Respuesta>(GetById(id)).State = EntityState.Deleted;
@@ -49,6 +49,7 @@ namespace SistemaEncuestas
             return context.Respuestas.Where(condicion).Select(c => c);
         }
 
+        
     }
 }
   
