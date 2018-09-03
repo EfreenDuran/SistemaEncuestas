@@ -30,5 +30,6 @@ namespace SistemaEncuestas.Models
             return new ApplicationDbContext();
         }
         public DbSet<Pregunta> Preguntas { get; set; }
+        public DbSet<Categoria> Categorias { get; set; } //Crea el puente conexion a la base de datos 
     }
 }
