@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
@@ -22,15 +21,15 @@ namespace SistemaEncuestas.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("ANDY", throwIfV1Schema: false)
+           : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
-
-        public IEnumerable<object> Respuestas { get; internal set; }
 
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
+        public DbSet<Pregunta> Preguntas { get; set; }
+        public DbSet<Categoria> Categorias { get; set; } //Crea el puente conexion a la base de datos 
     }
 }
