@@ -27,7 +27,7 @@ namespace SistemaEncuestas.Negocios
             {
                 return preguntaRepo.GetAll().ToList();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }
@@ -41,7 +41,7 @@ namespace SistemaEncuestas.Negocios
                 unitOfWork.Commit();
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 unitOfWork.RollBack();
                 return false;
@@ -58,7 +58,7 @@ namespace SistemaEncuestas.Negocios
                     return temp;
                 return null;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }
@@ -71,7 +71,7 @@ namespace SistemaEncuestas.Negocios
                 preguntaRepo.Delete(Id);
                 unitOfWork.Commit();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 unitOfWork.RollBack();
             }
@@ -84,7 +84,7 @@ namespace SistemaEncuestas.Negocios
                 preguntaRepo.Update(entity);
                 unitOfWork.Commit();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }

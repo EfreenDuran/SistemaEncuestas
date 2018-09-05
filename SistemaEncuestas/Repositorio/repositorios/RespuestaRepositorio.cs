@@ -36,7 +36,7 @@ namespace SistemaEncuestas
             Respuesta local = GetById(entity.Id);
             if (local != null)
                 context.Entry<Respuesta>(local).State = EntityState.Detached;
-            context.Entry<Respuesta>(local).State = EntityState.Modified;
+            context.Entry<Respuesta>(entity).State = EntityState.Modified;  //en vez de local va entity para que se actualice correctamente
         }
 
         public IQueryable<Respuesta> GetAll()

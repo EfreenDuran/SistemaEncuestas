@@ -6,6 +6,22 @@ namespace SistemaEncuestas.Models.Domain
 {
     public class Categoria
     {
+        private Categoria categoria;
+
+        public Categoria()
+        {
+        }
+
+        public Categoria(int id)
+        {
+            Id = id;
+        }
+
+        public Categoria(Categoria categoria)
+        {
+            this.categoria = categoria;
+        }
+
         [Key]
         public int Id { get; set;}
         [StringLength(100)]
