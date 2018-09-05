@@ -40,7 +40,7 @@ namespace SistemaEncuestas.repositorio.repositorios
             Categoria local = GetById(entity.Id);
             if (local != null)
                 context.Entry<Categoria>(local).State = EntityState.Detached;
-            context.Entry<Categoria>(local).State = EntityState.Modified;
+            context.Entry<Categoria>(entity).State = EntityState.Modified;
         }
         public IQueryable<Categoria> GetAll()
         {

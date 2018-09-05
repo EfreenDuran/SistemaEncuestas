@@ -1,4 +1,9 @@
-﻿using System;
+﻿using SistemaEncuestas.Models;
+using SistemaEncuestas.Models.Domain;
+using SistemaEncuestas.repositorio.Interfaz;
+using SistemaEncuestas.Repositorio.Infraestructura;
+using SistemaEncuestas.Repositorio.Interfaz;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -20,7 +25,7 @@ namespace SistemaEncuestas.repositorio.repositorios
         {
             context.Encuestas.Add(entity);
         }
-        public Encuestas GetById(int Id)
+        public Encuesta GetById(int Id)
         {
             //busca Encuestas igual a su id
             return context.Encuestas.FirstOrDefault(c => c.Id == Id);
@@ -35,7 +40,7 @@ namespace SistemaEncuestas.repositorio.repositorios
             Encuesta local = GetById(entity.Id);        
             if (local != null)
                 context.Entry<Encuesta>(local).State = EntityState.Detached;
-            context.Entry <Encuesta>(local).State = EntityState.Modified;
+            context.Entry <Encuesta>(entity).State = EntityState.Modified;  //en vez de local va entity para que se actualice correctamente
         }
         public IQueryable<Encuesta> GetAll()
         {
