@@ -2,6 +2,7 @@
 using SistemaEncuestas.repositorio.Infraestructura;
 using SistemaEncuestas.repositorio.Interfaz;
 using SistemaEncuestas.repositorio.repositorios;
+using SistemaEncuestas.Repositorio.Interfaz;
 using System;
 using System.Collections.Generic;
 using System.Linq;
