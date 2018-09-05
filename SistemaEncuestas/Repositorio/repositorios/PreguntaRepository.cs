@@ -33,7 +33,7 @@ namespace proyecto.repositorio.repositorios
             Pregunta local = GetById(entity.Id);
             if (local != null)
                 context.Entry<Pregunta>(local).State = EntityState.Detached;
-            context.Entry<Pregunta>(local).State = EntityState.Modified;
+            context.Entry<Pregunta>(entity).State = EntityState.Modified;   //en vez de local va entity para que se actualice correctamente
         }
         public IQueryable<Pregunta> GetAll()
         {

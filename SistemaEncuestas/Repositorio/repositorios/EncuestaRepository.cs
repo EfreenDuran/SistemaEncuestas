@@ -2,6 +2,7 @@
 using SistemaEncuestas.Models.Domain;
 using SistemaEncuestas.repositorio.Interfaz;
 using SistemaEncuestas.Repositorio.Infraestructura;
+using SistemaEncuestas.Repositorio.Interfaz;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -39,7 +40,7 @@ namespace SistemaEncuestas.repositorio.repositorios
             Encuesta local = GetById(entity.Id);        
             if (local != null)
                 context.Entry<Encuesta>(local).State = EntityState.Detached;
-            context.Entry <Encuesta>(local).State = EntityState.Modified;
+            context.Entry <Encuesta>(entity).State = EntityState.Modified;  //en vez de local va entity para que se actualice correctamente
         }
         public IQueryable<Encuesta> GetAll()
         {

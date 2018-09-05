@@ -1,11 +1,14 @@
 using SistemaEncuestas.Models;
 using SistemaEncuestas.Models.Domain;
+using SistemaEncuestas.repositorio.Interfaz;
+using SistemaEncuestas.repositorio.Infraestructura;
 using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Web;
 using SistemaEncuestas.Repositorio.Infraestructura;
-using SistemaEncuestas.repositorio.Interfaz;
 
 namespace SistemaEncuestas.repositorio.repositorios
 {
@@ -37,7 +40,7 @@ namespace SistemaEncuestas.repositorio.repositorios
             Categoria local = GetById(entity.Id);
             if (local != null)
                 context.Entry<Categoria>(local).State = EntityState.Detached;
-            context.Entry<Categoria>(local).State = EntityState.Modified;
+            context.Entry<Categoria>(entity).State = EntityState.Modified;
         }
         public IQueryable<Categoria> GetAll()
         {

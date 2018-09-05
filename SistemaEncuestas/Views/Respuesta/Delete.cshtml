@@ -1,0 +1,48 @@
+﻿@model SistemaEncuestas.Models.Domain.Respuesta
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Respuesta</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AspNetUsers.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AspNetUsers.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Preguntas.NPregunta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Preguntas.NPregunta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NRespuesta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NRespuesta)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
